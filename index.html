@@ -24,7 +24,12 @@
         <img src="img/Frame 2.png" alt="" />
         <div class="flex">
           <img class="w-7 h-7" src="img/dollar 1.png" alt="" />
-          <span class="pl-2 font-bold text-gray-500">5500 BDT</span>
+          <span class="pl-2 font-bold text-gray-500">
+            <span id="donation-amount" class="font-bold text-gray-500"
+              >5500</span
+            >
+            BDT</span
+          >
         </div>
       </div>
     </header>
@@ -60,7 +65,7 @@
             class="bg-[#1111110D] w-[110px] h-[44px] flex items-center justify-center rounded-xl"
           >
             <img class="w-6 h-6" src="img/dollar 1.png" alt="" />
-            <span class="pl-2">0 BDT</span>
+            <span class="pl-2"> <span id="total-amount">0</span> BDT</span>
           </div>
           <h4 class="font-bold text-[20px] py-5">
             Donate for Flood at Noakhali, Bangladesh
@@ -74,11 +79,13 @@
             need.
           </p>
           <input
+            id="input-field"
             class="border w-full py-3 rounded-xl px-10 mt-5"
             type="number"
             placeholder="Write Donation Amount"
           />
           <button
+            onclick="donationNow()"
             class="bg-[#B4F461] w-full py-3 font-semibold text-xl rounded-xl mt-5"
           >
             Donate Now

@@ -26,3 +26,19 @@ const history = () => {
   historyBtn.classList =
     "bg-[#B4F461] text-white font-semibold w-[150px] h-[49px] rounded-xl";
 };
+
+let count = 0;
+const donationNow = () => {
+  const inputField = document.getElementById("input-field").value;
+  const totalAmount = document.getElementById("total-amount");
+  let newAmount = parseInt(inputField) + parseInt(count);
+  count = newAmount;
+  totalAmount.innerText = newAmount;
+
+  let donationAmount = parseInt(
+    document.getElementById("donation-amount").innerText
+  );
+  let newDonation = donationAmount - newAmount;
+
+  document.getElementById("donation-amount").innerText = newDonation;
+};
