@@ -38,7 +38,22 @@ const donationNow = () => {
   let donationAmount = parseInt(
     document.getElementById("donation-amount").innerText
   );
-  let newDonation = donationAmount - newAmount;
+  let newDonation = donationAmount - inputField;
 
   document.getElementById("donation-amount").innerText = newDonation;
+
+  const history = document.getElementById("history");
+  const card = document.createElement("div");
+  card.classList = "border p-5 px-10 rounded-xl mt-10";
+  const tittle = event.target.parentNode.querySelector("h4").innerText;
+  card.innerHTML = `
+  <h2 class="font-bold">
+        ${count} Taka is ${tittle}
+        </h2>
+        <p class="pt-3">
+          Date : ${new Date()}
+        </p>
+      </div>
+  `;
+  history.appendChild(card);
 };
